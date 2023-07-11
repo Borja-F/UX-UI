@@ -17,7 +17,6 @@ st.write(f"Has elegido {option}")
 
 
 df = pd.read_csv("colegioslimpios.csv", sep=",")
-zonas_verdes = pd.read_csv("zonas-verdes.csv", sep= ";")
 
 uploaded_files = st.sidebar.file_uploader("Choose a CSV file",
                                     accept_multiple_files=False,
@@ -47,11 +46,11 @@ elif option == "Charts":
         st.dataframe(df)
 
 
-elif option=="Mapa":
+elif option=="Mapa+Gráficas":
 
     df_mapa = df
     
-    s_distrito = st.sidebar.checkbox('Colegios')
+    s_distrito = st.sidebar.checkbox('Distrito')
 
     s_operador = st.sidebar.checkbox('Operador')
 
