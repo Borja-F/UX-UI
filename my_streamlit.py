@@ -50,11 +50,10 @@ elif option == "Charts":
 elif option=="Mapa":
 
     df_mapa = df
-    zonas_verdes2 = zonas_verdes
     
     s_distrito = st.sidebar.checkbox('Colegios')
 
-    s_operador = st.sidebar.checkbox('Zonas Verdes')
+    s_operador = st.sidebar.checkbox('Operador')
 
     s_nº_cargadores = st.sidebar.checkbox("Nº Cargadores")
 
@@ -64,10 +63,7 @@ elif option=="Mapa":
             mask1 = (df["Codigo_postal"] == distrito) 
             df_mapa = df.loc[mask1].copy()
 
-    if s_operador:
-         operador = st.selectbox(label= "Selecciona operador", options=zonas_verdes2["NIVEL3"].unique(), index = 0)
-         mask2 = (zonas_verdes2["OPERADOR"] == operador)
-         zonas_verdes2 = zonas_verdes2.loc[mask2]
+
 
 
 
