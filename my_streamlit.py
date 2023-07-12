@@ -5,6 +5,8 @@ import numpy as np
 import folium
 import streamlit_folium
 
+from streamlit_folium import folium_static
+
 
 st.set_page_config(
     page_title="Mapa Valencia",
@@ -87,7 +89,7 @@ folium.LayerControl().add_to(mapa_valencia)
 st.markdown(mapa_valencia._repr_html_(), unsafe_allow_html=True)
 
 # Mostrar el mapa
-mapa_valencia 
+folium_static(mapa_valencia)
 
     
    
