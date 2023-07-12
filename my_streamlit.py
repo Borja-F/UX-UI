@@ -89,7 +89,7 @@ folium.LayerControl().add_to(mapa_valencia)
 st.markdown(mapa_valencia._repr_html_(), unsafe_allow_html=True)
 
 # Mostrar el mapa
-folium_static(mapa_valencia)
+mapa_valencia
 
 
     
