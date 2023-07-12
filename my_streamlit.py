@@ -41,7 +41,8 @@ if option == "Home":
 
 elif option == "Charts":
 
-
+    colegioslimpios = pd.read_csv("colegioslimpios.csv", index_col=0)
+    mask = colegioslimpios[colegioslimpios["Localidad"] == "VALÈNCIA"]
     
 
     mapa_valencia = folium.Map(location=[39.47825415129413, -0.36984913737192593],  zoom_start=16)
