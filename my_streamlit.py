@@ -50,6 +50,7 @@ elif option == "Charts":
 
     # Crear un objeto de mapa centrado en Valencia
     mapa_valencia = folium.Map(location=[latitud, longitud], zoom_start=12)
+    st.markdown(mapa_valencia._repr_html_(), unsafe_allow_html=True)
 
     # Crear una capa para los marcadores
     capa_marcadores = folium.FeatureGroup(name='Marcadores')
@@ -108,11 +109,11 @@ elif option == "Charts":
     # Mostrar el mapa
     mapa_valencia 
 
-    st.title("Test")
-    m = folium.Map([38.8934, -76.9470], tiles="stamentoner", zoom_start=12)
-    st.markdown(mapa_valencia._repr_html_(), unsafe_allow_html=True)
+    
+   
+    
 
-    st.markdown(mapa_valencia._repr_html_(), unsafe_allow_html=True)
+    
 
 
 
