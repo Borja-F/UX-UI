@@ -3,7 +3,7 @@ from PIL import Image
 import pandas as pd
 import numpy as np
 import folium
-
+from streamlit_folium import folium_static
 
 
 st.set_page_config(
@@ -106,8 +106,10 @@ elif option == "Charts":
     # Añadir control de capas al mapa
     folium.LayerControl().add_to(mapa_valencia)
 
+    folium_static(mapa_valencia)
+
     # Mostrar el mapa
-    mapa_valencia 
+    
 
     
    
