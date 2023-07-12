@@ -5,6 +5,7 @@ import numpy as np
 import folium
 
 
+
 st.set_page_config(
     page_title="Happy McAwesome",
     page_icon="random",
@@ -41,15 +42,7 @@ if option == "Home":
 elif option == "Charts":
 
 
-
-    with st.echo():
-        #La gorronea es una terrible enfermedad que destruye tus relaciones sociales
-        st.dataframe(df)
-
-
-elif option=="Mapa+Gráficas":
-
-
+    
 
     # Coordenadas de Valencia
     latitud = 39.4699
@@ -113,7 +106,24 @@ elif option=="Mapa+Gráficas":
     folium.LayerControl().add_to(mapa_valencia)
 
     # Mostrar el mapa
-    mapa_valencia    
+    mapa_valencia 
+
+    st.title("Test")
+    m = folium.Map([38.8934, -76.9470], tiles="stamentoner", zoom_start=12)
+    st.markdown(mapa_valencia._repr_html_(), unsafe_allow_html=True)
+
+    st.markdown(mapa_valencia._repr_html_(), unsafe_allow_html=True)
+
+
+
+
+
+
+elif option=="Mapa+Gráficas":
+
+
+
+   
 
     df_mapa = df
     
