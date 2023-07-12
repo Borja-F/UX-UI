@@ -32,7 +32,7 @@ if option == "Zonas más Seguras":
 
     # Crear un objeto de mapa centrado en Valencia
     mapa_valencia = folium.Map(location=[latitud, longitud], zoom_start=12)
-    st.markdown(mapa_valencia._repr_html_(), unsafe_allow_html=True)
+
 
     # Crear una capa para los marcadores
     capa_marcadores = folium.FeatureGroup(name='Marcadores')
@@ -87,7 +87,7 @@ if option == "Zonas más Seguras":
 
     # Añadir control de capas al mapa
     folium.LayerControl().add_to(mapa_valencia)
-    st.markdown(mapa_valencia._repr_html_(), unsafe_allow_html=True)
+    
 
     # Mostrar el mapa
     folium_static(mapa_valencia)
@@ -101,7 +101,7 @@ elif option == "Colegios":
     mapa_valencia = folium.Map(location=[39.47825415129413, -0.36984913737192593],  zoom_start=16)
     fg = folium.FeatureGroup(name='Colegios')
     mapa_valencia.add_child(fg)
-    st.markdown(mapa_valencia._repr_html_(), unsafe_allow_html=True)
+
 
     # Colocamos los colegios
     for (index, row) in mask.iterrows():
@@ -128,7 +128,7 @@ elif option == "Paradas Metro":
 
 elif option == "Zonas de interés cultural":
     mapa_valencia = folium.Map(location=[39.47825415129413, -0.36984913737192593],  zoom_start=16)
-    st.markdown(mapa_valencia._repr_html_(), unsafe_allow_html=True)
+   
 
     folium.GeoJson('be-bien-bic.geojson', name='Bienes culturales').add_to(mapa_valencia)
     folium.LayerControl().add_to(mapa_valencia)
@@ -136,7 +136,7 @@ elif option == "Zonas de interés cultural":
 
 elif option == "Zonas Verdes":
     mapa_valencia = folium.Map(location=[39.47825415129413, -0.36984913737192593],  zoom_start=16)
-    st.markdown(mapa_valencia._repr_html_(), unsafe_allow_html=True)
+    
 
     def style_function(style_function): #Definimos la función para cambiar el color a verde
         return {
@@ -153,7 +153,7 @@ longitud = -0.3763
 
 # Crear un objeto de mapa centrado en Valencia
 mapa_valencia = folium.Map(location=[latitud, longitud], zoom_start=12)
-st.markdown(mapa_valencia._repr_html_(), unsafe_allow_html=True)
+
 
 # Crear una capa para los marcadores
 capa_marcadores = folium.FeatureGroup(name='Marcadores')
@@ -208,7 +208,7 @@ mapa_valencia.add_child(capa_marcadores)
 
 # Añadir control de capas al mapa
 folium.LayerControl().add_to(mapa_valencia)
-st.markdown(mapa_valencia._repr_html_(), unsafe_allow_html=True)
+
 
 # Mostrar el mapa
 folium_static(mapa_valencia)
